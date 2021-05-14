@@ -6,11 +6,19 @@ public class Employee {
 	private int salary;
 	public String position;
 	
+	public static void main(String[] args) {
+		Employee[] employees = new Employee[3];
+		for(int i = 0; i < employees.length; i++) {
+			employees[i] = new Employee("first" + i, "last" + i, 10000);
+			System.out.println(employees[i].firstName);
+		}
+	}
 	
-	public Employee(String firstNameInput, String lastNameInput, int salaryInput, String positionInput) {
+	
+	public Employee(String firstNameInput, String lastNameInput, int salaryInput) {
 		firstName = firstNameInput;
 		lastName = lastNameInput;
-		position = positionInput;
+	
 		salary = salaryInput;
 		
 	}
